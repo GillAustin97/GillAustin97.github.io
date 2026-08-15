@@ -811,6 +811,12 @@ footer{
           <input type="hidden" name="request_type" value="Resume Request" />
           <input type="hidden" name="_subject" value="New Resume Request from Portfolio" />
 
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+
           <div class="form-row">
             <div class="form-field">
               <label for="resume-name">Name</label>
@@ -892,6 +898,11 @@ footer{
 
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjybonoj" method="POST">
           <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
           <div class="form-row">
             <div class="form-field">
               <label for="name">Name</label>
@@ -1032,7 +1043,7 @@ resumeRequestForm.addEventListener("submit", async (event) => {
 });
 
 </script>
-  
+
   <!-- Cloudflare Web Analytics -->
 <script
   type="module"
@@ -1040,6 +1051,6 @@ resumeRequestForm.addEventListener("submit", async (event) => {
   data-cf-beacon='{"token":"517acdef0b764e2596de0383916abaab"}'>
 </script>
 <!-- End Cloudflare Web Analytics -->
-  
+
 </body>
 </html>
