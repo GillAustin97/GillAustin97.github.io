@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Austin Gill — Computer Science Graduate pursuing Software Engineering opportunities" />
+<title>Austin Gill | Computer Science Graduate</title>
+<style>
+:root{
+  --bg:#070a0f;
+  --bg2:#0b1017;
+  --panel:#0e141d;
+  --panel2:#111923;
+  --text:#f5f7fa;
+  --muted:#9aa6b5;
+  --line:#1f2a37;
+  --accent:#6bc7ff;
+  --accent2:#9fe8ff;
+  --max:1160px;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 80% 0%,rgba(107,199,255,.08),transparent 32rem),
+    linear-gradient(180deg,#080b10 0%,#070a0f 55%,#06090d 100%);
+  color:var(--text);
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,10,15,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nav{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:800;
+  letter-spacing:-.02em;
+  font-size:1.05rem;
+}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{
+  font-size:.9rem;
+  color:#b7c1cd;
+  transition:.2s;
+}
+.nav-links a:hover{color:#fff}
+.nav-cta{
+  padding:10px 14px;
+  border:1px solid #2a3948;
+  border-radius:10px;
+}
+.menu{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:#fff;
+  border-radius:10px;
+  padding:9px 11px;
+}
+
+.hero{
+  min-height:82vh;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  align-items:center;
+  gap:70px;
+  padding:90px 0 70px;
+}
+.eyebrow{
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(3.4rem,7vw,6.8rem);
+  line-height:.94;
+  letter-spacing:-.065em;
+  max-width:760px;
+}
+.hero h1 span{color:#9ba8b8}
+.hero p{
+  color:var(--muted);
+  font-size:1.08rem;
+  max-width:660px;
+  margin-top:26px;
+}
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:11px;
+  border:1px solid var(--line);
+  font-size:.9rem;
+  font-weight:750;
+  transition:.2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{
+  background:#eef7ff;
+  color:#071018;
+  border-color:#eef7ff;
+}
+.btn.secondary{background:#0c1219}
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:#748294;
+  font-size:.82rem;
+}
+.hero-meta span:before{content:"•";color:var(--accent);margin-right:8px}
+
+.hero-card{
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#0d141d,#0a0f16);
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 28px 80px rgba(0,0,0,.28);
+}
+.hero-card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:28px;
+}
+.code-label{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:var(--accent);
+  font-size:.77rem;
+}
+.status{
+  display:inline-flex;align-items:center;gap:7px;
+  color:#9db0c1;font-size:.77rem;
+}
+.status i{
+  width:7px;height:7px;border-radius:50%;
+  background:#73d9a2;
+  box-shadow:0 0 12px rgba(115,217,162,.45);
+}
+.hero-card h3{
+  font-size:1.5rem;
+  letter-spacing:-.03em;
+  margin-bottom:8px;
+}
+.hero-card p{margin:0;color:#8996a6;font-size:.95rem}
+.stack{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:24px
+}
+.stack span{
+  padding:7px 10px;
+  border:1px solid #23303e;
+  border-radius:8px;
+  color:#a9b5c2;
+  background:#0a0f15;
+  font-size:.75rem;
+  font-weight:700;
+}
+.mini-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:22px;
+}
+.mini{
+  border:1px solid #1d2936;
+  border-radius:12px;
+  padding:17px;
+  background:#0a0f15;
+}
+.mini strong{display:block;font-size:1.15rem;margin-bottom:3px}
+.mini span{font-size:.76rem;color:#748294}
+
+.section{padding:95px 0}
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:38px;
+}
+.section-head h2{
+  font-size:clamp(2rem,4vw,3.4rem);
+  letter-spacing:-.045em;
+}
+.section-head p{
+  color:var(--muted);
+  max-width:550px;
+  font-size:.95rem;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+}
+.card{
+  border:1px solid var(--line);
+  background:rgba(14,20,29,.84);
+  border-radius:var(--radius);
+}
+.about-copy{padding:30px}
+.about-copy p{color:var(--muted);margin-top:14px}
+.about-copy .lead{
+  color:#fff;
+  font-size:1.35rem;
+  font-weight:800;
+  margin-top:0;
+}
+.fact-list{padding:12px 24px}
+.fact{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:17px 0;
+  border-bottom:1px solid #1d2733;
+}
+.fact:last-child{border-bottom:none}
+.fact span:first-child{color:#7f8c9b;font-size:.84rem}
+.fact span:last-child{font-weight:700;text-align:right}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.project{
+  padding:28px;
+  min-height:330px;
+  display:flex;
+  flex-direction:column;
+  transition:.22s;
+}
+.project:hover{
+  border-color:#304355;
+  transform:translateY(-3px);
+}
+.project.featured{grid-column:span 2;min-height:360px}
+.project-top{
+  display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.project-type{
+  color:var(--accent);
+  font-size:.74rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.project-links{display:flex;gap:8px}
+.icon-link{
+  width:38px;height:38px;
+  border:1px solid #253342;
+  border-radius:9px;
+  display:grid;place-items:center;
+  color:#b3c0cc;
+  font-size:.9rem;
+}
+.project h3{
+  font-size:1.7rem;
+  letter-spacing:-.04em;
+  margin-top:28px;
+}
+.project p{
+  color:var(--muted);
+  margin-top:10px;
+  max-width:780px;
+}
+.project .stack{margin-top:auto;padding-top:24px}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.skill-card{padding:26px}
+.skill-card h3{font-size:1rem;margin-bottom:18px}
+.skill-list{
+  display:flex;flex-wrap:wrap;gap:8px
+}
+.skill-list span{
+  border:1px solid #23303d;
+  background:#0a0f15;
+  color:#a8b5c3;
+  border-radius:8px;
+  padding:8px 10px;
+  font-size:.8rem;
+  font-weight:700;
+}
+
+.contact{
+  padding:36px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
+}
+.contact h2{
+  font-size:clamp(2rem,4vw,3.2rem);
+  letter-spacing:-.04em;
+}
+.contact p{color:var(--muted);margin-top:8px;max-width:650px}
+.contact .actions{margin:0;justify-content:flex-end}
+
+
+.contact-form-wrap{
+  padding:30px;
+}
+.contact-form-wrap h3{
+  font-size:1.15rem;
+  letter-spacing:-.02em;
+  margin-bottom:6px;
+}
+.contact-form-wrap > p{
+  color:var(--muted);
+  font-size:.9rem;
+  margin-bottom:22px;
+}
+.contact-form{
+  display:grid;
+  gap:15px;
+}
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.form-field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.form-field label{
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#aeb9c5;
+}
+.form-field input,
+.form-field textarea{
+  width:100%;
+  border:1px solid #263442;
+  background:#090e14;
+  color:#f5f7fa;
+  border-radius:10px;
+  padding:13px 14px;
+  font:inherit;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder{color:#596777}
+.form-field input:focus,
+.form-field textarea:focus{
+  border-color:#4f91ba;
+  box-shadow:0 0 0 3px rgba(107,199,255,.08);
+}
+.form-field textarea{min-height:150px;resize:vertical}
+.form-submit{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.form-submit .btn{cursor:pointer}
+.form-status{min-height:22px;font-size:.84rem;color:#8e9baa}
+.form-status.success{color:#7fd8a8}
+.form-status.error{color:#ff9c9c}
+.form-note{color:#687687;font-size:.76rem;line-height:1.5}
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}
+.contact-intro{padding:30px}
+.contact-intro h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.04em;margin-top:4px}
+.contact-intro p{color:var(--muted);margin-top:12px}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+
+
+.resume-request{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:18px;
+}
+.resume-info,
+.resume-form-wrap{
+  padding:30px;
+}
+.resume-info h3,
+.resume-form-wrap h3{
+  font-size:1.15rem;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+.resume-info p,
+.resume-form-wrap > p{
+  color:var(--muted);
+  font-size:.92rem;
+}
+.resume-points{
+  margin-top:22px;
+  display:grid;
+  gap:12px;
+}
+.resume-point{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  color:#aeb9c5;
+  font-size:.87rem;
+}
+.resume-point i{
+  width:8px;
+  height:8px;
+  margin-top:7px;
+  border-radius:50%;
+  background:var(--accent);
+  flex:0 0 auto;
+}
+.resume-form{
+  display:grid;
+  gap:15px;
+  margin-top:20px;
+}
+.resume-status{
+  min-height:22px;
+  font-size:.84rem;
+  color:#8e9baa;
+}
+.resume-status.success{color:#7fd8a8}
+.resume-status.error{color:#ff9c9c}
+
+footer{
+  padding:28px 0 40px;
+  border-top:1px solid rgba(255,255,255,.06);
+  color:#6f7d8d;
+  font-size:.78rem;
+}
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-row strong{color:#9eacba}
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:.6s ease;
+}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:35px}
+  .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr}
+  .project.featured{grid-column:span 1}
+  .contact{grid-template-columns:1fr}
+  .contact .actions{justify-content:flex-start}
+}
+@media(max-width:700px){
+  .container{width:min(var(--max),calc(100% - 28px))}
+  .menu{display:block}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:74px;
+    left:14px;
+    right:14px;
+    padding:14px;
+    flex-direction:column;
+    align-items:stretch;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:#0a0f15;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:9px 10px}
+  .hero{padding-top:70px;min-height:auto}
+  .hero h1{font-size:clamp(3.4rem,17vw,5.6rem)}
+  .section{padding:75px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:10px}
+  .mini-grid{grid-template-columns:1fr}
+  .project{min-height:310px}
+  .contact{padding:26px}
+  .contact-layout{grid-template-columns:1fr}
+  .resume-request{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .contact-intro,.contact-form-wrap{padding:24px}
+  .btn{width:100%}
+  .actions{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">Austin <span>Gill</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#resume-request">Request Resume</a>
+    </nav>
+    <button class="menu" id="menu">Menu</button>
+  </div>
+</header>
+
+<main>
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow">Computer Science Graduate Portfolio</div>
+    <h1>Austin Gill<br><span>Aspiring Software Engineer</span></h1>
+    <p>
+      Computer Science graduate pursuing an entry-level Software Engineer role, with hands-on
+      experience building mobile applications, Java projects, automation concepts, and AI-assisted software.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+
+    <div class="hero-meta">
+      <span>Java</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>React Native</span>
+      <span>TypeScript</span>
+      <span>Git / GitHub</span>
+    </div>
+  </div>
+
+  <aside class="hero-card reveal">
+    <div class="hero-card-top">
+      <span class="code-label">candidate.profile</span>
+      <span class="status"><i></i> Seeking entry-level software engineering roles</span>
+    </div>
+    <h3>Building projects while growing as a software engineer.</h3>
+    <p>
+      I use hands-on projects to strengthen my programming, debugging, software design,
+      problem-solving, and product-development skills.
+    </p>
+    <div class="stack">
+      <span>Java</span><span>JavaScript</span><span>TypeScript</span>
+      <span>React Native</span><span>Expo</span><span>Git</span>
+    </div>
+    <div class="mini-grid">
+      <div class="mini"><strong>CS</strong><span>Bachelor's Degree</span></div>
+      <div class="mini"><strong>2</strong><span>Featured Projects</span></div>
+      <div class="mini"><strong>Mobile</strong><span>React Native / Expo</span></div>
+      <div class="mini"><strong>AI</strong><span>Assisted Development</span></div>
+    </div>
+  </aside>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2>Computer Science graduate with a builder mindset.</h2>
+      </div>
+      <p>
+        I learn best by building. My projects combine computer science fundamentals
+        with practical software ideas and user-focused problem solving.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="card about-copy reveal">
+        <p class="lead">
+          I build software that aims to make a process faster, easier, or more useful.
+        </p>
+        <p>
+          My work includes healthcare mobile apps, customer-service concepts, Java game
+          projects, business software ideas, analytics automation, and AI-supported tools.
+        </p>
+        <p>
+          I am currently focused on preparing for an entry-level software engineering role while strengthening my
+          Java, JavaScript, TypeScript, React Native, Git, debugging, and software-design skills.
+        </p>
+      </div>
+
+      <div class="card fact-list reveal">
+        <div class="fact"><span>Education</span><span>B.S. Computer Science</span></div>
+        <div class="fact"><span>Career Goal</span><span>Software Engineer</span></div>
+        <div class="fact"><span>Mobile</span><span>React Native + Expo</span></div>
+        <div class="fact"><span>Workflow</span><span>Git + GitHub</span></div>
+        <div class="fact"><span>Interests</span><span>AI, Automation, Apps</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<s<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Selected Work</div>
+        <h2>Featured Projects</h2>
+      </div>
+      <p>
+        Featured projects that demonstrate my mobile development, UI design, TypeScript,
+        React Native, interface planning, and software problem-solving experience.
+      </p>
+    </div>
+
+    <div class="project-grid">
+<article class="card project featured reveal">
+        <div class="project-top">
+          <span class="project-type">Mobile Application</span>
+          <div class="project-links">
+            <a class="icon-link" href="#" title="Add GitHub repository">GH</a>
+            <a class="icon-link" href="#" title="Add live demo">↗</a>
+          </div>
+        </div>
+        <h3>MediMatch</h3>
+        <p>
+          A React Native healthcare application designed to improve communication between
+          patients and clinics. The project includes authentication flows, appointments,
+          patient navigation, settings, messaging concepts, and mobile-first UI development.
+        </p>
+        <div class="stack">
+          <span>React Native</span><span>Expo</span><span>TypeScript</span>
+          <span>Mobile UI</span><span>Git</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project-top">
+          <span class="project-type">Mobile Application</span>
+          <div class="project-links">
+            <a class="icon-link" href="https://github.com/Team2FS/GameVault.git" target="_blank" rel="noreferrer" title="View GameVault on GitHub">GH</a>
+          </div>
+        </div>
+        <h3>GameVault</h3>
+        <p>
+          A mobile application project where I helped lead UI development using FigJam for
+          wireframing and interface planning. I also coded and integrated core features,
+          including categorized weapon tracking and visual progress bars, with a focus on
+          creating a smooth and intuitive user experience.
+        </p>
+        <div class="stack">
+          <span>Mobile UI</span>
+          <span>FigJam</span>
+          <span>Feature Integration</span>
+          <span>UX Design</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section><section class="section" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Technical Skills</div>
+        <h2>Skills & Technologies</h2>
+      </div>
+      <p>
+        Technologies and technical skills I have used through coursework,
+        software projects, IT support experience, and hands-on technical work.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="card skill-card reveal">
+        <h3>Programming Languages</h3>
+        <div class="skill-list">
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+          <span>Python</span>
+          <span>C</span>
+        </div>
+      </div>
+
+      <div class="card skill-card reveal">
+        <h3>Development Tools</h3>
+        <div class="skill-list">
+          <span>React Native</span>
+          <span>Expo</span>
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>GitKraken</span>
+          <span>Visual Studio</span>
+          <span>IntelliJ IDEA</span>
+          <span>Android Studio</span>
+          <span>Figma</span>
+          <span>Trello</span>
+          <span>Jira Board</span>
+        </div>
+      </div>
+
+      <div class="card skill-card reveal">
+        <h3>IT & Systems</h3>
+        <div class="skill-list">
+          <span>Hardware Troubleshooting</span>
+          <span>Software Troubleshooting</span>
+          <span>Hardware / Software Repair</span>
+          <span>Desktop Setup & Configuration</span>
+          <span>Active Directory</span>
+          <span>Google Admin</span>
+          <span>Device Auditing</span>
+          <span>Technical Documentation</span>
+          <span>Security Updates</span>
+          <span>Policy Enforcement</span>
+          <span>Soldering</span>
+        </div>
+      </div>
+
+      <div class="card skill-card reveal">
+        <h3>Networking</h3>
+        <div class="skill-list">
+          <span>RJ45 Repair</span>
+          <span>Ethernet Wall Port Repair</span>
+          <span>Network Cabling</span>
+          <span>Network Management</span>
+          <span>Access Point Installation</span>
+        </div>
+      </div>
+
+      <div class="card skill-card reveal">
+        <h3>AI-Assisted Development</h3>
+        <div class="skill-list">
+          <span>ChatGPT</span>
+          <span>AI-Assisted Software Development</span>
+          <span>Debugging</span>
+          <span>Code Review</span>
+          <span>Software Design</span>
+        </div>
+      </div>
+
+      <div class="card skill-card reveal">
+        <h3>Platforms & Certification</h3>
+        <div class="skill-list">
+          <span>Windows</span>
+          <span>Android</span>
+          <span>iOS</span>
+          <span>Chrome / Linux</span>
+          <span>Lenovo Warranty Computer Repair</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="resume-request">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Resume Access</div>
+        <h2>Request My Resume</h2>
+      </div>
+      <p>
+        My resume is available upon request. To help keep my personal information private,
+        please provide a valid email address and LinkedIn profile with your request.
+      </p>
+    </div>
+
+    <div class="resume-request">
+      <div class="card resume-info reveal">
+        <h3>Why request access?</h3>
+        <p>
+          I keep the resume off the public site so I can share it directly with verified
+          recruiters, hiring managers, and professional contacts.
+        </p>
+
+        <div class="resume-points">
+          <div class="resume-point"><i></i><span>Your email is used only to respond to your resume request.</span></div>
+          <div class="resume-point"><i></i><span>A LinkedIn profile helps me verify professional requests.</span></div>
+          <div class="resume-point"><i></i><span>Submitting this form does not automatically expose or download my resume.</span></div>
+        </div>
+      </div>
+
+      <div class="card resume-form-wrap reveal">
+        <h3>Send a Resume Request</h3>
+        <p>Complete the form below and I’ll receive your request by email.</p>
+
+        <form
+          class="resume-form"
+          id="resumeRequestForm"
+          action="https://formspree.io/f/xjybonoj"
+          method="POST"
+        >
+          <input type="hidden" name="request_type" value="Resume Request" />
+          <input type="hidden" name="_subject" value="New Resume Request from Portfolio" />
+
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="resume-name">Name</label>
+              <input id="resume-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="resume-email">Email</label>
+              <input id="resume-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="resume-linkedin">LinkedIn Profile</label>
+            <input
+              id="resume-linkedin"
+              name="linkedin"
+              type="url"
+              placeholder="https://www.linkedin.com/in/your-profile"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="resume-company">Company / Organization</label>
+            <input id="resume-company" name="company" type="text" placeholder="Company or organization name" />
+          </div>
+
+          <div class="form-field">
+            <label for="resume-message">Reason for Request</label>
+            <textarea
+              id="resume-message"
+              name="message"
+              placeholder="Briefly tell me about the opportunity or why you'd like to review my resume."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button class="btn primary" id="resumeSendButton" type="submit">Request Resume</button>
+            <span class="resume-status" id="resumeStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Send Me a Message</h2>
+      </div>
+      <p>
+        Interested in discussing an entry-level software engineering opportunity,
+        one of my projects, or a potential collaboration? Send me a message directly here.
+      </p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="card contact-intro reveal">
+        <div class="eyebrow">Let's Connect</div>
+        <h2>I'm looking for my next opportunity.</h2>
+        <p>
+          I'm pursuing entry-level software engineering roles where I can contribute,
+          learn from an experienced team, and continue growing as an engineer.
+        </p>
+        <div class="contact-links">
+          <a class="btn secondary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn secondary" href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="card contact-form-wrap reveal">
+        <h3>Contact Form</h3>
+        <p>Fill out the form below and the message will be delivered to my email inbox.</p>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjybonoj" method="POST">
+          <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+          <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button class="btn primary" id="sendButton" type="submit">Send Message</button>
+            <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+          </div>
+          <p class="form-note">Your email address is not displayed on this website. Messages are sent securely without leaving this page.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span><strong>Austin Gill</strong> · Computer Science Graduate Portfolio</span>
+    <span>Built with AI-assisted development · Directed, reviewed, and customized by Austin Gill</span>
+  </div>
+</footer>
+
+<script>
+const menu = document.getElementById("menu");
+const links = document.getElementById("navLinks");
+menu.addEventListener("click",()=>links.classList.toggle("open"));
+document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>links.classList.remove("open")));
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("on");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+const sendButton = document.getElementById("sendButton");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  sendButton.disabled = true;
+  sendButton.textContent = "Sending...";
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      contactForm.reset();
+      formStatus.textContent = "Message sent successfully. Thank you!";
+      formStatus.className = "form-status success";
+    } else {
+      const data = await response.json().catch(() => ({}));
+      const message =
+        data?.errors?.map(error => error.message).join(", ") ||
+        "Your message could not be sent. Please try again.";
+      formStatus.textContent = message;
+      formStatus.className = "form-status error";
+    }
+  } catch (error) {
+    formStatus.textContent = "Your message could not be sent. Please try again.";
+    formStatus.className = "form-status error";
+  } finally {
+    sendButton.disabled = false;
+    sendButton.textContent = "Send Message";
+  }
+});
+
+
+const resumeRequestForm = document.getElementById("resumeRequestForm");
+const resumeStatus = document.getElementById("resumeStatus");
+const resumeSendButton = document.getElementById("resumeSendButton");
+
+resumeRequestForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  resumeSendButton.disabled = true;
+  resumeSendButton.textContent = "Sending Request...";
+  resumeStatus.textContent = "";
+  resumeStatus.className = "resume-status";
+
+  try {
+    const response = await fetch(resumeRequestForm.action, {
+      method: "POST",
+      body: new FormData(resumeRequestForm),
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      resumeRequestForm.reset();
+      resumeStatus.textContent = "Resume request sent successfully.";
+      resumeStatus.className = "resume-status success";
+    } else {
+      const data = await response.json().catch(() => ({}));
+      const message =
+        data?.errors?.map(error => error.message).join(", ") ||
+        "Your request could not be sent. Please try again.";
+      resumeStatus.textContent = message;
+      resumeStatus.className = "resume-status error";
+    }
+  } catch (error) {
+    resumeStatus.textContent = "Your request could not be sent. Please try again.";
+    resumeStatus.className = "resume-status error";
+  } finally {
+    resumeSendButton.disabled = false;
+    resumeSendButton.textContent = "Request Resume";
+  }
+});
+
+</script>
+</body>
+</html>
