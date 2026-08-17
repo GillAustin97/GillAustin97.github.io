@@ -1182,6 +1182,49 @@ resumeRequestForm.addEventListener("submit", async (event) => {
   }
 });
 
+const aiChatButton = document.getElementById("aiChatButton");
+const aiChat = document.getElementById("aiChat");
+const aiChatClose = document.getElementById("aiChatClose");
+const aiChatForm = document.getElementById("aiChatForm");
+const aiChatInput = document.getElementById("aiChatInput");
+const aiChatMessages = document.getElementById("aiChatMessages");
+
+aiChatButton.addEventListener("click", () => {
+  aiChat.classList.toggle("open");
+});
+
+aiChatClose.addEventListener("click", () => {
+  aiChat.classList.remove("open");
+});
+
+function addChatMessage(text, type) {
+  const message = document.createElement("div");
+
+  message.className = `ai-message ${type}`;
+  message.textContent = text;
+
+  aiChatMessages.appendChild(message);
+
+  aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+}
+
+aiChatForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const message = aiChatInput.value.trim();
+
+  if (!message) return;
+
+  addChatMessage(message, "user");
+
+  aiChatInput.value = "";
+
+  addChatMessage(
+    "AI connection has not been configured yet.",
+    "bot"
+  );
+});
+
 </script>
   
 <!-- Cloudflare Web Analytics -->
