@@ -1054,6 +1054,32 @@ footer{
   </div>
 </footer>
 
+<button class="ai-chat-button" id="aiChatButton">AI</button>
+
+<div class="ai-chat" id="aiChat">
+  <div class="ai-chat-header">
+    <strong>Austin AI Assistant</strong>
+    <button class="ai-chat-close" id="aiChatClose">×</button>
+  </div>
+
+  <div class="ai-chat-messages" id="aiChatMessages">
+    <div class="ai-message bot">
+      Hi! I'm Austin's portfolio assistant. Ask me about his projects, skills, or software engineering background.
+    </div>
+  </div>
+
+  <form class="ai-chat-input" id="aiChatForm">
+    <input
+      type="text"
+      id="aiChatInput"
+      placeholder="Ask me something..."
+      autocomplete="off"
+      required
+    />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
 <script>
 const menu = document.getElementById("menu");
 const links = document.getElementById("navLinks");
